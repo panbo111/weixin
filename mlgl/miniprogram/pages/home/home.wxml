@@ -1,0 +1,73 @@
+
+<view wx:if="{{isHide}}">
+    <view wx:if="{{canIUse}}" >
+        <view class='header'>
+            <image src='/images/wx_login.png'></image>
+        </view>
+
+        <view class='content'>
+            <view>申请获取以下权限</view>
+            <text>获得你的公开信息(昵称，头像等)</text>
+        </view>
+
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+</view>
+
+<view wx:else>
+    <view>
+    <view class='home-container'>
+  <view class='auser'> 
+    <view>
+    <van-icon name="manager-o"color="#666" class='homeming'/>
+    <text wx:for="{{listuser}}" wx:key="index">{{item.name}}</text>
+    </view>
+  </view>
+
+  
+    <view class='userlan'>我的订单</view>
+    <view class='dingdan'>
+    <view class='buff'>
+    <van-icon name="after-sale" color='#f6a127' size='30px'/>
+    <view>付款中</view>
+    </view>
+
+    <view class='buff'>
+    <van-icon name="cash-back-record"color='#f6a127' size='30px'/>
+    <view>已完成</view>
+    </view>
+
+    <view class='buff'>
+    <van-icon name="gold-coin-o" color='#f6a127'size='30px'/>
+    <view>已退款</view>
+    </view>
+
+    <view class='buff'>
+    <van-icon name="close"color='#f6a127' size='30px'/>
+    <view>已取消</view>
+    </view>
+
+  </view>
+
+<view class='userlan'>我的工具</view>
+  <view class='dingdan'>
+   <view class='buffs'>
+    <van-icon name="cart-circle-o" color='#f6a127'size='30px'/>
+    <view>购物车</view>
+    </view>
+  </view>
+
+<view class='userlan'>我的卡劵</view>
+  <view class='dingdan'>
+    <view class='buffs'>
+    <van-icon name="coupon-o" color='#f6a127'size='30px'/>
+    <view>卡劵</view>
+    </view>
+  </view>
+
+</view></view>
+</view>
+

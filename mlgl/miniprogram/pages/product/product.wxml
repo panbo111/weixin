@@ -1,0 +1,166 @@
+<!--基本内容-->
+
+<view class="content" wx:for="{{qianyin}}" wx:key="index">
+  <image src="{{item.fileid}}" class="content-img"></image>
+  <view class="price">￥{{item.price}}</view>
+  <view class="title">{{item.title}}</view>
+</view>
+
+<van-notice-bar
+  mode="closeable"
+  text="优惠活动 满100减10元 满200减20元 满300减30元"
+/>
+
+<view class="hh">
+<view>选择商品数量 ></view>
+<view>交易记录  <text>浏览+ 交易1+</text>   </view>
+
+<view class="hr">
+<view>-继续拖动，查看商品信息-</view>
+</view>
+
+</view>
+<!--详情评价-->
+
+<van-tabs bind:click="onClick" >
+  <van-tab title="详情"><image wx:for="{{qianyin}}" wx:key="index" src="{{item.fileid}}"></image></van-tab>
+  <van-tab title="评价"></van-tab>
+</van-tabs>
+
+
+
+<!--下方按钮-->
+<van-goods-action>
+  <van-goods-action-icon
+    icon="chat-o"
+    text="客服"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-icon
+    icon="cart-o"
+    text="购物车"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-button
+    text="加入购物车"
+    type="danger"
+    bind:click="onClickButton"
+    bind:click="clickme"
+  />
+  <van-goods-action-button
+    text="立即购买"
+    bind:click="onClickButton"
+    bind:click="changeYL"
+    type="warning"
+  />
+</van-goods-action>
+
+
+
+
+
+ 
+<!--屏幕背景变暗的背景  -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--弹出框  -->
+
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <!--弹出框内容 -->
+  <!--1-->
+  <view class="car" wx:for="{{qianyin}}" wx:key="index">
+
+    <image src="{{item.fileid}}" class="img"></image>
+
+    <text> {{item.price}} \n {{item.title}}</text>
+   
+    </view>
+<!--2-->
+<!--计数-->
+<view class="step">
+<text>数量</text>
+<van-stepper
+  value="{{ value }}"
+  integer
+  min="1"
+  max="99"
+  step="1"
+  bind:change="onChange"
+/>
+</view>
+    
+  <button class="buy-btn" data-goodid="{{goods.goodsId}}" class="button-addCar" bindtap="addCar" formType="submit">加入购物车</button>
+ 
+    <!--3-->
+ 
+  
+
+  </view>
+
+
+  <view class="commodity_screen" bindtap="hideModal1" wx:if="{{showModal1Status}}"></view>
+  <!--弹出框  -->
+
+  <view animation="{{animationData1}}" class="commodity_attr_box" wx:if="{{showModal1Status}}">
+  <!--弹出框内容 -->
+  <!--1-->
+  <view class="car" wx:for="{{qianyin}}" wx:key="index">
+
+    <image src="{{item.fileid}}" class="img"></image>
+
+    <text> {{item.price}} \n {{item.title}}</text>
+   
+    </view>
+<!--2-->
+<!--计数-->
+<view class="step">
+<text>数量</text>
+<van-stepper
+  value="{{ value }}"
+  integer
+  min="1"
+  max="99"
+  step="1"
+  bind:change="onChange"
+/>
+</view>
+  
+  
+  
+  </view>
+
+<view class="modal-mask" bindtap="hideModals"  wx:if="{{showModals}}"></view>
+ 
+<view class="modal-dialog" wx:if="{{showModals}}">
+
+  <view class="car" wx:for="{{qianyin}}" wx:key="index">
+  
+
+    <image src="{{item.fileid}}" class="img"></image>
+
+    <text> {{item.price}} \n {{item.title}}</text>
+  
+    </view>
+<!--2-->
+<!--计数-->
+<view class="step">
+<text>数量</text>
+<van-stepper
+  value="{{ value }}"
+  integer
+  min="1"
+  max="99"
+  step="1"
+  bind:change="onChange"
+/>
+</view>
+<button>购买</button>
+</view>
+
+
+
+
+
+
+
+
+  

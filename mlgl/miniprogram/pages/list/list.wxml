@@ -1,0 +1,24 @@
+<view class='tht'>
+  <image src='{{tehuijpg}}'lazy-load='true'></image>
+</view>
+<view class='juan'>
+  <image wx:for="{{listjuan}}" 
+   wx:key="index"
+   src="{{item.fileid}}"lazy-load='true'bindtap="navigateTo"data-id="{{item._id}}"></image>
+</view>
+
+<view class='title'>-  所有商品  -</view>
+
+<view wx:for="{{list}}"wx:key="index" class='list-container' bindtap="toproduct">
+
+  <view class='list'data-id="{{item._id}}">
+    <image src='{{item.fileid}}' class='list-img'lazy-load='true'data-id="{{item._id}}" ></image>
+    <text class='list-title'data-id="{{item._id}}">{{item.title}}</text>
+  <view>
+  <view class='list-price'data-id="{{item._id}}">￥{{item.price}}</view>
+    <van-icon name="shopping-cart-o" color='#f6a127' class='cart1'/>
+  </view>
+  </view>
+
+      
+</view>

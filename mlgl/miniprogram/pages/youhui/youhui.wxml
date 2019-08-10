@@ -1,0 +1,14 @@
+<view class="continer" wx:for="{{num}}" wx:key="index">
+  
+    <view class="biao">宠物</view>
+
+    <view>满{{item.num}}00减{{item.num}}0元</view>
+    <view>全场可用</view>
+  <button bindtap="show">立即领取</button>
+    <view>优惠 ¥{{item.num}}0</view>
+    <view>有效期： 2020-02-16</view>
+  <view class="nb">
+    <view>部分可用商品</view>
+    <view bindtap="back">返回首页 <van-icon name="arrow" /></view>
+  </view>
+</view>

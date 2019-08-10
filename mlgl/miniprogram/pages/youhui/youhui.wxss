@@ -1,0 +1,24 @@
+
+.continer{
+  background-color: #fafafa;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px gainsboro; 
+}
+.biao{
+  font-size: 30rpx;
+  border-bottom:1px dashed #5f5e5e;
+  padding-bottom:20rpx; 
+}
+.continer view{
+  margin-bottom: 20rpx;
+}
+button{
+  background-color: #f6a127;
+  color: #ffffff;
+  width: 300rpx;
+}
+.nb{
+  padding-top: 10rpx;
+  border-top:1px dashed #5f5e5e;
+}

@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/cart/cart",
+    "pages/home/home",
+    "pages/youhui/youhui",
+    "pages/product/product",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "美丽狗粮",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home2.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "商品",
+        "iconPath": "images/icons/fenlei.png",
+        "selectedIconPath": "images/icons/fenlei2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/icons/gouwuche.png",
+        "selectedIconPath": "images/icons/gouwuche2.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "images/icons/huiyuan.png",
+        "selectedIconPath": "images/icons/huiyuan2.png"
+      }
+    ]
+  }
+}
